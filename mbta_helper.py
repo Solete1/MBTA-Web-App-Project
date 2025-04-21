@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 MAPBOX_TOKEN = os.getenv("MAPBOX_TOKEN")
-MBTA_API_KEY = os.getenv("MBTA_API_KEY")
+MBTA_TOKEN = os.getenv("MBTA_API_KEY")
 
 MAPBOX_BASE_URL = "https://api.mapbox.com/geocoding/v5/mapbox.places"
 MBTA_BASE_URL = "https://api-v3.mbta.com/stops"
