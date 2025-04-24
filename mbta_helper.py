@@ -1,12 +1,13 @@
 import os
 import urllib.request
 import json
+import urllib.parse
 from dotenv import load_dotenv
 
 load_dotenv()
 
 MAPBOX_TOKEN = os.getenv("MAPBOX_TOKEN")
-MBTA_TOKEN = os.getenv("MBTA_API_KEY")
+MBTA_TOKEN = os.getenv("MBTA_TOKEN")
 
 MAPBOX_BASE_URL = "https://api.mapbox.com/geocoding/v5/mapbox.places"
 MBTA_BASE_URL = "https://api-v3.mbta.com/stops"
@@ -60,3 +61,7 @@ def find_stop_near(place_name):
     stop, wheelchair = get_nearest_station(lat, lon)
     print(f"Stop: {stop}, Wheelchair Accessible: {wheelchair}")
     return stop, wheelchair
+
+if __name__ == "__main__":
+    location = "Boston Public Library"  
+    find_stop_near(location)
