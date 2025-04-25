@@ -3,16 +3,25 @@
 <head>
     <title>MBTA Finder</title>
     <link rel="stylesheet" href="../static/index.css">
-
 </head>
 <body class="form-page">
     <div class="form-container">
-        <h1>Find Nearest MBTA Stop</h1>
+        <h1>MBTA Station, Weather, and Events Finder</h1>
         <form method="POST" action="/nearest_mbta">
             <label for="place">Enter a place name:</label><br>
             <input type="text" id="place" name="place" required><br>
             <button type="submit" class="btn">Submit</button>
         </form>
+    </div>
+
+    <div style="margin: 50px auto; max-width: 850px; padding: 25px; background: #f9fafb; border: 2px solid #00a86b; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <h2 style="text-align: center; color: #00a86b;">What This App Does</h2>
+        <ul style="list-style-type: disc; padding-left: 20px; line-height: 1.6; font-size: 1.05em; color: #444;">
+            <li>Finds the <strong>nearest MBTA stop</strong> based on the place you enter.</li>
+            <li>Shows whether the MBTA stop is <strong>wheelchair accessible</strong>.</li>
+            <li>Displays the <strong>current weather conditions</strong> (temperature and description) for the location.</li>
+            <li>Lists <strong>upcoming nearby events</strong> (concerts, sports, and more) within a 10-mile radius.</li>
+        </ul>
     </div>
 </body>
 </html>
