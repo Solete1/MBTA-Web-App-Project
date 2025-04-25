@@ -9,14 +9,14 @@ load_dotenv()
 MAPBOX_TOKEN = os.getenv("MAPBOX_TOKEN")
 MBTA_TOKEN = os.getenv("MBTA_TOKEN")
 
-MAPBOX_BASE_URL = "https://api.mapbox.com/geocoding/v5/mapbox.places"
+MAPBOX_BASE_URL = "https://api.mapbox.com/search/geocode/v6/forward"
 MBTA_BASE_URL = "https://api-v3.mbta.com/stops"
 
 def get_lat_long(place_name):
     print("🔎 Getting lat/long for:", place_name)
 
     encoded_place = urllib.parse.quote(place_name)
-    url = f"{MAPBOX_BASE_URL}/{encoded_place}.json?access_token={MAPBOX_TOKEN}&types=poi"
+    url = f"{MAPBOX_BASE_URL}?q={encoded_place}&access_token={MAPBOX_TOKEN}"
     print("📡 Mapbox URL:", url)
 
     try:
@@ -63,5 +63,5 @@ def find_stop_near(place_name):
     return stop, wheelchair
 
 if __name__ == "__main__":
-    location = "Boston Public Library"  
+    location = "Boston Common"  
     find_stop_near(location)
