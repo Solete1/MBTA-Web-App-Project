@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nearest MBTA Stop</title>
+    <link rel="stylesheet" href="../static/mbta_station.css">
+</head>
+<body class="station-page">
+    <div class="station-container">
+        <h1>Nearest MBTA Stop</h1>
+        <p><strong>Stop Name:</strong> {{place}}</p>
+        <p><strong>Location:</strong> {{station}}</p>
+        <p><strong>Wheelchair Accessible:</strong> {{accessible}}</p>
+        <a href="{{ url_for('index') }}" class="btn">Search another place</a>
+    </div>
+</body>
+</html>

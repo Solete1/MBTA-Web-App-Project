@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MBTA Finder</title>
+    <link rel="stylesheet" href="../static/index.css">
+
+</head>
+<body class="form-page">
+    <div class="form-container">
+        <h1>Find Nearest MBTA Stop</h1>
+        <form method="POST" action="/nearest_mbta">
+            <label for="place">Enter a place name:</label><br>
+            <input type="text" id="place" name="place" required><br>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
