@@ -7,9 +7,21 @@
 <body class="station-page">
     <div class="station-container">
         <h1>Nearest MBTA Stop</h1>
-        <p><strong>Stop Name:</strong> {{place}}</p>
-        <p><strong>Location:</strong> {{station}}</p>
+        <p><strong>Stop Name:</strong> {{station}}</p>
+        <p><strong>Location Entered:</strong> {{place}}</p>
         <p><strong>Wheelchair Accessible:</strong> {{accessible}}</p>
+
+        <h2>Weather Information</h2>
+        <p><strong>Condition:</strong> {{weather.description}}</p>
+        <p><strong>Temperature:</strong> {{weather.temperature}} °F</p>
+
+        <h2>Nearby Events</h2>
+        <ul>
+            {% for event in events %}
+                <li>{{ event }}</li>
+            {% endfor %}
+        </ul>
+
         <a href="{{ url_for('index') }}" class="btn">Search another place</a>
     </div>
 </body>
